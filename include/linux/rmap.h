@@ -222,9 +222,7 @@ static inline void page_dup_rmap(struct page *page, bool compound)
 int page_referenced(struct page *, int is_locked,
 			struct mem_cgroup *memcg, unsigned long *vm_flags);
 
-bool try_to_unmap(struct page *page, enum ttu_flags flags,
-				struct vm_area_struct *vma);
-
+bool try_to_unmap(struct page *page, enum ttu_flags flags);
 /* Avoid racy checks */
 #define PVMW_SYNC		(1 << 0)
 /* Look for migarion entries rather than present PTEs */
