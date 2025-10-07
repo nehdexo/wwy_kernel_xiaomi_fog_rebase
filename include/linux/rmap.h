@@ -223,6 +223,9 @@ int page_referenced(struct page *, int is_locked,
 			struct mem_cgroup *memcg, unsigned long *vm_flags);
 
 bool try_to_unmap(struct page *page, enum ttu_flags flags);
+bool try_to_unmap_vma(struct page *page, enum ttu_flags flags,
+			struct vm_area_struct *vma)
+
 /* Avoid racy checks */
 #define PVMW_SYNC		(1 << 0)
 /* Look for migarion entries rather than present PTEs */
