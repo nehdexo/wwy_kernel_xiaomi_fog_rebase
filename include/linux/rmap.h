@@ -224,7 +224,7 @@ int page_referenced(struct page *, int is_locked,
 
 bool try_to_unmap(struct page *page, enum ttu_flags flags);
 bool try_to_unmap_vma(struct page *page, enum ttu_flags flags,
-			struct vm_area_struct *vma)
+			struct vm_area_struct *vma);
 
 /* Avoid racy checks */
 #define PVMW_SYNC		(1 << 0)
