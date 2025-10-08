@@ -590,7 +590,6 @@ static int ufs_hi3660_init(struct ufs_hba *hba)
 }
 
 static struct ufs_hba_variant_ops ufs_hba_hisi_vops = {
-	.name = "hi3660",
 	.init = ufs_hi3660_init,
 	.link_startup_notify = ufs_hi3660_link_startup_notify,
 	.pwr_change_notify = ufs_hi3660_pwr_change_notify,
