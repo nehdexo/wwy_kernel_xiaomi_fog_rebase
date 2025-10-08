@@ -114,7 +114,7 @@ struct attribute_group {
 
 #define __ATTR_RO(_name) {						\
 	.attr	= { .name = __stringify(_name), .mode = 0444 },		\
-	.show	= _name##_show,						\
+	.show	= NULL,						\
 }
 
 #define __ATTR_RO_MODE(_name, _mode) {					\
