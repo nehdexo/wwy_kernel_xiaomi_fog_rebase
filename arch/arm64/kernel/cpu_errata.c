@@ -1267,7 +1267,7 @@ else if (start == __spectre_bhb_loop_k32_start)
 else if (start == __spectre_bhb_clearbhb_start)
 		return __spectre_bhb_clearbhb_end;
 	return NULL;
-
+}
 
 static void kvm_setup_bhb_slot(const char *hyp_vecs_start)
 {
