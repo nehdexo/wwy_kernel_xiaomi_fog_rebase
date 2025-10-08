@@ -7,6 +7,7 @@
 #define __QCOM_CLK_COMMON_H__
 
 #include <linux/reset-controller.h>
+#include <linux/clk-provider.h>
 
 struct platform_device;
 struct regmap_config;
@@ -46,7 +47,7 @@ struct parent_map {
 };
 
 struct clk_dummy {
-	struct clk_hw **hw;
+	struct clk_hw hw;
 	struct reset_controller_dev reset;
 	unsigned long rrate;
 };
