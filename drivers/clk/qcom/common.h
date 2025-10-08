@@ -46,7 +46,7 @@ struct parent_map {
 };
 
 struct clk_dummy {
-	struct clk_hw hw;
+	struct clk_hw **hw;
 	struct reset_controller_dev reset;
 	unsigned long rrate;
 };
