@@ -470,7 +470,7 @@ static void dsi_bridge_post_disable(struct drm_bridge *bridge)
 	int event = DRM_BLANK_POWERDOWN;
 #endif
 
-	g_notify_data.data = &event;
+	g_notify_data.data = &events;
 
 	if (!bridge) {
 		DSI_ERR("Invalid params\n");
