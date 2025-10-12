@@ -16,10 +16,10 @@
 void __cpu_soft_restart(unsigned long el2_switch, unsigned long entry,
 	unsigned long arg0, unsigned long arg1, unsigned long arg2);
 
-static inline void __noreturn cpu_soft_restart(unsigned long int entry,
-					       unsigned long int arg0,
-					       unsigned long int arg1,
-					       unsigned long int arg2)
+static inline void __noreturn cpu_soft_restart(long unsigned int entry,
+					       long unsigned int arg0,
+					       long unsigned int arg1,
+					       long unsigned int arg2)
 {
 	typeof(__cpu_soft_restart) *restart;
 
