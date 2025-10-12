@@ -1949,6 +1949,8 @@ static bool load_too_imbalanced(long src_load, long dst_load,
  * into account that it might be best if task running on the dst_cpu should
  * be exchanged with the source task
  */
+static int select_idle_sibling(struct task_struct *p, int prev_cpu, int cpu);
+
 static void task_numa_compare(struct task_numa_env *env,
 			      long taskimp, long groupimp, bool maymove)
 {
